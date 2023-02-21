@@ -9,7 +9,6 @@ const models = require('../models')
 const getAllArticles = (req, res) => {
     models.Article.findAll()
         .then(articles => {
-            console.log(articles);
             return res.status(200).json({articles});
         })
         .catch(err => {
@@ -27,7 +26,6 @@ const getArticleBySlug = (req, res) => {
         }],
         })
         .then(article => {
-            console.log(article);
             return res.status(200).json({article});
         })
         .catch(err => {

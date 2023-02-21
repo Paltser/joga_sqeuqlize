@@ -20,6 +20,9 @@ const ArticleRouter = require('./routes/article');
 app.use('/', ArticleRouter);
 app.use('/article', ArticleRouter);
 
+const AuthorRouter = require('./routes/author');
+app.use('/', AuthorRouter);
+
 app.listen(3000, () => {
     console.log('Server is running on port http://localhost:3000');
 })
